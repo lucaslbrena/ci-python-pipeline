@@ -20,14 +20,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
-
-      - name: Install linting tools
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install pylint
+          python -m pip install pylint pytest   # ✅ installs both tools
 
       - name: Lint code
         run: python -m pylint --errors-only main.py
 
       - name: Run tests
-        run: pytest
+        run: python -m pytest
