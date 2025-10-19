@@ -23,7 +23,7 @@ jobs:
           pip install pylint pytest   # <-- Added here
 
       - name: Lint
-        run: pylint tests/test_main.py
+        run: pylint test_main.py
 
       - name: Testes
         run: pytest
