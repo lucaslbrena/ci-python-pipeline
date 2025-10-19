@@ -22,7 +22,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Lint code
-        run: pylint main.py
+        run: python -m pylint --errors-only main.py
 
       - name: Run tests
         run: pytest
